@@ -1,0 +1,28 @@
+﻿@await Html.PartialAsync("_Header")
+<h2>Welcome Mr. / Ms. User</h2>
+<ul>
+    <li>Name : @ViewBag.UName</li>
+    <li>Country : @ViewBag.UCountry</li>
+    <li>Working at @ViewData["Org"]</li>
+</ul>
+
+@{
+    string Name = "Asp.net Core MVC";
+}
+@{
+    for (var i = 5; i > 0; i--)
+    {
+        <span>Count Down Begins @i</span>
+        <br>
+    }
+    <h4>You are Studying @Name</h4>
+}
+
+@await Component.InvokeAsync("My")
+<h1>Menu</h1>
+<ul>
+    <li><a href="User/ApiData">Fetch Forecast Data</a></li>
+    <li>@Html.ActionLink("Home Page", "Index", "Home")</li>
+    <li><a asp-action="AboutUs" asp-controller="Home">About Us</a></li>
+</ul>
+@await Html.PartialAsync("_Footer")

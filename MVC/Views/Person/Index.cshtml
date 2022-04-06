@@ -1,0 +1,15 @@
+﻿@model MVC.Models.Person
+
+<fieldset>
+    <legend>User Details Are : </legend>
+        <ul>
+            <li>Name - @Model.name</li>
+            <li>Country - @Model.country</li>
+            <li>Age - @Model.age</li>
+            <li>Email - @Model.email</li>
+        </ul>
+    <form action="Person/Update" method="post">
+        @Html.EditorForModel()
+        <button type="submit" > Update </button>
+    </form>
+</fieldset>

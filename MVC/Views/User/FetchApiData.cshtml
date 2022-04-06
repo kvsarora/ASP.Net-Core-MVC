@@ -1,0 +1,8 @@
+﻿<!--This is Injetion Dependancy inside view-->
+@inject MVC.ApiService.IForecastData ForecastData
+
+@{
+    var Data = ForecastData.getForeast();
+    foreach (var item in Data)
+        @item
+}

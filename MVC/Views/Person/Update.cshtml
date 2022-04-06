@@ -1,0 +1,12 @@
+﻿@model MVC.Models.Person
+<h1>Updated Details Are</h1>
+<ul>
+    <li>@Html.DisplayNameFor(model => model.name) - @Html.DisplayFor(model => model.name) @Html.ValidationMessageFor(model=>model.name)</li>
+    <li>@Html.DisplayNameFor(model => model.age) - @Html.DisplayFor(model => model.age)</li>
+    <li>Country - @Model.country</li>
+    <li>Email - @Model.email</li>
+</ul>
+<fieldset style="color:red">
+    <legend>Errors</legend>
+    <p>@Html.ValidationSummary()</p>
+</fieldset>
